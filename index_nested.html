@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Checkout</title>
+</head>
+
+<body>
+
+    <style>
+        h1 {
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-size: 1.4em;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .wrapper {
+            width: 600px;
+            padding: 0;
+            border: 1px dotted gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .navigation {
+            background-color: cornflowerblue;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            & li {
+                padding: 10px 0;
+            }
+
+            & li a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: darkblue;
+                }
+
+                &:active {
+                    color: red;
+                }
+            }
+        }
+
+        .shoppingCart {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+            color: #333;
+
+            & li {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                border-bottom: 1px dotted gray;
+
+                &:first-of-type {
+                    border-top: 1px dotted gray;
+                }
+            }
+
+            & li a {
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    color: orange;
+                }
+
+                &:active {
+                    color: darkorange;
+                }
+            }
+        }
+
+        .checkoutArea {
+            text-align: right;
+        }
+
+        .checkoutButton {
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            background-color: cornflowerblue;
+            color: white;
+
+            &.secondaryButton {
+                background-color: lightgray;
+            }
+
+            &:hover {
+                background-color: orange;
+            }
+
+            &:active {
+                background-color: darkorange;
+            }
+        }
+        
+    </style>
+
+
+    <div class="wrapper">
+        <ul class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Shopping Cart</a></li>
+        </ul>
+        <div class="content">
+            <h1>Warenkorb</h1>
+            <ul class="shoppingCart">
+                <li>
+                    <span class="product"><a href="">Spielekonsole</a></span>
+                    <span class="price">99,95 EUR</span>
+                </li>
+                <li>
+                    <span class="product"><a href="">Spiel</a></span>
+                    <span class="price">39,95 EUR</span>
+                </li>
+            </ul>
+            <div class="checkoutArea">
+                <button class="checkoutButton secondaryButton">Empty Cart</button>
+                <button class="checkoutButton">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
